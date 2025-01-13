@@ -6,8 +6,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                "geist-sans": ["var(--font-geist-sans)", ...fontFamily.sans],
-                "geist-mono": ["var(--font-geist-mono)", ...fontFamily.mono],
+                poppins: ["var(--font-poppins)", ...fontFamily.sans],
             },
             colors: {
                 background: "hsl(var(--background))",

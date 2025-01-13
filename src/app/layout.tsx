@@ -1,6 +1,6 @@
 import "@/styles/main.css";
 import { LayoutProps } from "@/types/app";
-import { geistMono, geistSans } from "@/ui/fonts";
+import { poppins } from "@/ui/fonts";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,11 +10,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps) {
     return (
-        <html
-            lang="en"
-            className={`${geistSans.variable} ${geistMono.variable}`}
-        >
-            <body className="font-geist-mono">{children}</body>
+        <html lang="en" className={`${poppins.variable}`}>
+            <body className="font-poppins">{children}</body>
         </html>
     );
 }
