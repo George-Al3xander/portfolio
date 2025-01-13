@@ -1,12 +1,24 @@
+import {
+    PropsWithTagSpecification,
+    VariantPropsWithChildren,
+} from "@/types/component-variants";
 import { cn } from "@/utils/cn";
-import { cva, VariantProps } from "class-variance-authority";
-import { FC, HTMLAttributes } from "react";
+import { cva } from "class-variance-authority";
+import { FC } from "react";
 
 export const typographyVariants = cva("font-poppins opacity-80", {
     variants: {
         variant: {
             title: "font-bold",
             description: "opacity-70",
+        },
+        highlight: {
+            primary: "opacity-100 text-primary",
+            secondary: "opacity-100 text-secondary",
+            accent: "opacity-100 text-accent",
+            background: "text-background",
+            muted: "opacity-100 text-muted",
+            destructive: "opacity-100 text-destructive",
         },
         size: {
             sm: "text-sm",
@@ -22,21 +34,23 @@ export const typographyVariants = cva("font-poppins opacity-80", {
     },
 });
 
-type Props = HTMLAttributes<HTMLParagraphElement> &
-    VariantProps<typeof typographyVariants> & {
-        as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "article";
-    };
+type Props = PropsWithTagSpecification<
+    VariantPropsWithChildren<typeof typographyVariants>
+>;
 
 export const Typography: FC<Props> = ({
     as: Tag = "p",
     className,
     variant,
     size,
+    highlight,
     ...props
 }) => {
     return (
         <Tag
-            className={cn(typographyVariants({ variant, size, className }))}
+            className={cn(
+                typographyVariants({ variant, size, highlight, className }),
+            )}
             {...props}
         />
     );
