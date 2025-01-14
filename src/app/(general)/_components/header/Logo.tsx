@@ -3,7 +3,7 @@ import { CodeXmlIcon } from "@/ui/icons";
 import { cn } from "@/utils/cn";
 
 import { FC } from "react";
-import { AUTHOR_NAME } from "../constants/metadata";
+import { AUTHOR_NAME } from "../../constants/metadata";
 
 const size = "lg";
 

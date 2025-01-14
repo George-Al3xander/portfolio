@@ -2,7 +2,7 @@ import { Button } from "@/ui/components/atoms/Button";
 import { NavBar } from "@/ui/components/molecules/NavBar";
 import { ResponsiveDrawer } from "@/ui/components/organisms/ResponsiveDrawer";
 import { MenuIcon } from "lucide-react";
-import { WEBSITE_ROUTES } from "../constants/routes";
+import { WEBSITE_ROUTES } from "../../constants/routes";
 import { Logo } from "./Logo";
 
 const MENU_DESCRIPTION =
