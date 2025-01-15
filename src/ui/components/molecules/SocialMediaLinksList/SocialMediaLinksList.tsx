@@ -12,7 +12,7 @@ export const SocialMediaLinksList: FC<Props> = ({
     linkedinHref,
 }) => {
     return (
-        <ul className="flex items-center gap-4">
+        <ul className="flex gap-4">
             <li>
                 <IconLink
                     icon={GithubIcon}
