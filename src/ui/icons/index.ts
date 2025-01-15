@@ -1,1 +1,7 @@
-export { CodeXmlIcon, MoonIcon, SunIcon } from "lucide-react";
+export {
+    CodeXmlIcon,
+    GithubIcon,
+    LinkedinIcon,
+    MoonIcon,
+    SunIcon,
+} from "lucide-react";
