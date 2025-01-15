@@ -11,5 +11,5 @@ const firebaseConfig = {
     appId: env.APP_ID,
 };
 
-const app = initializeApp(firebaseConfig);
-export const internalClient = getFirestore(app);
+export const firebaseApp = initializeApp(firebaseConfig);
+export const firestoreClient = getFirestore(firebaseApp);

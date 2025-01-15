@@ -6,6 +6,13 @@ const nextConfig: NextConfig = {
             resolveAlias: { "@/*": "./src/*" },
         },
     },
+    images: {
+        remotePatterns: [
+            {
+                hostname: "firebasestorage.googleapis.com",
+            },
+        ],
+    },
 };
 
 export default nextConfig;
