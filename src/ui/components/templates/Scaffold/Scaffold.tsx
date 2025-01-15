@@ -7,14 +7,14 @@ type Props = PropsWithChildren<{
 
 export const TemplateScaffold: FC<Props> = ({ header, footer, children }) => {
     return (
-        <div className="relative flex min-h-screen flex-col justify-between gap-10 px-10 py-4">
+        <div className="relative flex min-h-screen flex-col justify-between gap-10 pt-4">
             {header && (
-                <header className={"sticky top-0 z-30 w-full bg-background"}>
+                <header className="sticky top-0 z-30 w-full bg-background px-10">
                     {header}
                 </header>
             )}
-            <main className="flex-1">{children}</main>
-            {footer && <footer>{footer}</footer>}
+            <main className="flex-1 px-10 py-4">{children}</main>
+            {footer && <footer className="px-10 py-4">{footer}</footer>}
         </div>
     );
 };
