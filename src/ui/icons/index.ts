@@ -1,5 +1,6 @@
 export {
     CodeXmlIcon,
+    EyeIcon,
     GithubIcon,
     LinkedinIcon,
     MoonIcon,
