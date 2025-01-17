@@ -17,7 +17,7 @@ export const TemplateScaffold: FC<Props> = ({ header, footer, children }) => {
                 {children}
             </main>
             {footer && (
-                <footer className="responsive-box py-4">{footer}</footer>
+                <footer className="responsive-box mt-16 py-4">{footer}</footer>
             )}
         </div>
     );
