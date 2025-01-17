@@ -1,4 +1,6 @@
 export {
+    ArrowLeftIcon,
+    ArrowRightIcon,
     BookOpenCheckIcon,
     CheckIcon,
     CodeXmlIcon,
