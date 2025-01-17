@@ -71,3 +71,9 @@ body {
         @apply bg-background text-foreground;
     }
 }
+
+@layer components {
+    .responsive-box {
+        @apply mx-auto w-[min(60rem,90%)];
+    }
+}
