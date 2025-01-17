@@ -10,13 +10,17 @@ export const CollaborationBlock = () => (
                 ?
             </Typography>
         </Typography>
-        <div className="flex justify-center gap-4 sm:justify-start">
-            <Button asChild>
-                <Link href="/contact">Get In Touch</Link>
-            </Button>
-            <Button asChild variant={"outline"} className="border-black">
-                <Link href="/projects">Browse Projects</Link>
-            </Button>
-        </div>
+        <ul className="flex flex-wrap justify-center gap-4 sm:justify-start">
+            <li>
+                <Button asChild>
+                    <Link href="/contact">Get In Touch</Link>
+                </Button>
+            </li>
+            <li>
+                <Button variant={"outline"} asChild>
+                    <Link href="/projects">Browse Projects</Link>
+                </Button>
+            </li>
+        </ul>
     </div>
 );
