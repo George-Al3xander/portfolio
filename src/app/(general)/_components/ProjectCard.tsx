@@ -32,10 +32,10 @@ export const ProjectCard: FC<Props> = ({
             {description}
         </Typography>
         {(url_preview || url_github) && (
-            <ul className={"mt-auto flex gap-4"}>
+            <ul className={"mt-auto flex flex-col gap-4 sm:flex-row"}>
                 {url_preview && (
-                    <li>
-                        <Button size={"lg"} asChild>
+                    <li className="basis-full">
+                        <Button size={"lg"} className="w-full" asChild>
                             <Link href={url_preview} target="_blank">
                                 <EyeIcon />
                                 Preview
@@ -45,8 +45,13 @@ export const ProjectCard: FC<Props> = ({
                 )}
 
                 {url_github && (
-                    <li>
-                        <Button size={"lg"} variant={"outline"} asChild>
+                    <li className="basis-full">
+                        <Button
+                            size={"lg"}
+                            className="w-full"
+                            variant={"outline"}
+                            asChild
+                        >
                             <Link href={url_github} target="_blank">
                                 <CodeXmlIcon />
                                 Source code
