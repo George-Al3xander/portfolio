@@ -1,4 +1,6 @@
 export {
+    BookOpenCheckIcon,
+    CheckIcon,
     CodeXmlIcon,
     EyeIcon,
     GithubIcon,
