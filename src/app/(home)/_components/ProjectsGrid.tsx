@@ -1,5 +1,5 @@
+import { getProjects } from "@/app/(general)/_actions";
 import { ProjectCard } from "@/app/(general)/_components/ProjectCard";
-import { getProjects } from "@/app/(projects)/_actions";
 
 export const ProjectsGrid = async () => {
     const projects = await getProjects();
