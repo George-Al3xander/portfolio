@@ -10,6 +10,10 @@ export const env = createEnv({
         STORAGE_BUCKET: z.string().min(1),
         SENDER_ID: z.string().min(1),
         APP_ID: z.string().min(1),
+        EMAILJS_SERVICE_ID: z.string().min(1),
+        EMAILJS_TEMPLATE_ID: z.string().min(1),
+        EMAILJS_PUBLIC_KEY: z.string().min(1),
+        EMAILJS_PRIVATE_KEY: z.string().min(1),
     },
     runtimeEnv: {
         NODE_ENV: process.env.NODE_ENV,
@@ -19,5 +23,9 @@ export const env = createEnv({
         STORAGE_BUCKET: process.env.STORAGE_BUCKET,
         SENDER_ID: process.env.SENDER_ID,
         APP_ID: process.env.APP_ID,
+        EMAILJS_SERVICE_ID: process.env.EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID: process.env.EMAILJS_TEMPLATE_ID,
+        EMAILJS_PUBLIC_KEY: process.env.EMAILJS_PUBLIC_KEY,
+        EMAILJS_PRIVATE_KEY: process.env.EMAILJS_PRIVATE_KEY,
     },
 });
