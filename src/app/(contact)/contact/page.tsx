@@ -1,12 +1,15 @@
-import { Typography } from "@/ui/components/atoms/Typography";
+import { ContactForm } from "@/app/(contact)/_components/ContactForm";
+import { InfoBlock } from "@/app/(contact)/_components/InfoBlock";
+import { TitledSection } from "@/ui/components/molecules/TitledSection";
 
 const ContactPage = () => {
     return (
-        <section>
-            <Typography variant="title" highlight={"primary"} as={"p"}>
-                Contact page
-            </Typography>
-        </section>
+        <TitledSection title="Get In Touch">
+            <div className="flex flex-col items-center justify-between gap-10 sm:flex-row">
+                <ContactForm />
+                <InfoBlock />
+            </div>
+        </TitledSection>
     );
 };
 
