@@ -1,6 +1,5 @@
 import * as internalApi from "@/services/api/internal";
-import { TInformation } from "@/types/models/Information";
-import { TProject } from "@/types/models/Project";
+import { TInformation, TProject } from "@/types/models/firestore";
 
 export const getExperience = async () => await internalApi.experience.findAll();
 

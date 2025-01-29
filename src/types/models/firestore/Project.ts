@@ -1,9 +1,10 @@
-export type TProject = {
+import { FirestoreItem } from "@/types/models/firestore/FirestoreItem";
+
+export type TProject = FirestoreItem<{
     description: string;
     isFullstack?: boolean;
     name: string;
     url_github?: string;
     url_preview?: string;
-    id: string;
     img: string;
-};
+}>;

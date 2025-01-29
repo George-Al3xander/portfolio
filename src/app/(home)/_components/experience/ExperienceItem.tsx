@@ -1,8 +1,7 @@
-import { TExperience } from "@/types/models/Experience";
+import { TExperience } from "@/types/models/firestore";
 import { Button } from "@/ui/components/atoms/Button";
 import { Typography } from "@/ui/components/atoms/Typography";
 import { BookOpenCheckIcon, CheckIcon } from "@/ui/icons";
-
 import Link from "next/link";
 import { FC } from "react";
 

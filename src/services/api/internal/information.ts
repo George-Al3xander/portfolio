@@ -1,5 +1,5 @@
 import { firestoreClient } from "@/services/libs/internalClient";
-import { TInformation } from "@/types/models/Information";
+import { TInformation } from "@/types/models/firestore";
 import { doc, getDoc } from "firebase/firestore";
 
 const COLLECTION_PATH = "information";

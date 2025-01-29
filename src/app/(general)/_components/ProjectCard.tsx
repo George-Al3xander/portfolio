@@ -1,4 +1,4 @@
-import { TProject } from "@/types/models/Project";
+import { TProject } from "@/types/models/firestore";
 import { Button } from "@/ui/components/atoms/Button";
 import { Typography } from "@/ui/components/atoms/Typography";
 import { CodeXmlIcon, EyeIcon } from "@/ui/icons";

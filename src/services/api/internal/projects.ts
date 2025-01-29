@@ -1,5 +1,5 @@
 import { firestoreClient } from "@/services/libs/internalClient";
-import { TProject } from "@/types/models/Project";
+import { TProject } from "@/types/models/firestore";
 import { handleQueryFirestoreItems } from "@/utils/firestore";
 import { collection, where } from "firebase/firestore";
 

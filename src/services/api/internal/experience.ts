@@ -1,5 +1,5 @@
 import { firestoreClient } from "@/services/libs/internalClient";
-import { TExperience } from "@/types/models/Experience";
+import { TExperience } from "@/types/models/firestore";
 import { handleQueryFirestoreItems } from "@/utils/firestore";
 import { collection } from "firebase/firestore";
 
