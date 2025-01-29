@@ -26,7 +26,7 @@ export const NavigationBlock = () => (
                 </Button>
             ),
         }}
-        title={<Logo mainComponentTag={"p"} hideTextOnMobile={false} />}
+        title={<Logo mainComponentTag={"p"} />}
         description={MENU_DESCRIPTION}
     >
         <NavBar links={WEBSITE_ROUTES} />

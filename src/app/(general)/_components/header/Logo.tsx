@@ -1,6 +1,5 @@
 import { Typography } from "@/ui/components/atoms/Typography";
 import { CodeXmlIcon } from "@/ui/icons";
-import { cn } from "@/utils/cn";
 
 import { FC } from "react";
 import { AUTHOR_NAME } from "../../constants/metadata";
@@ -8,22 +7,24 @@ import { AUTHOR_NAME } from "../../constants/metadata";
 const size = "lg";
 
 type Props = {
-    hideTextOnMobile?: boolean;
     mainComponentTag?: keyof HTMLElementTagNameMap;
+    textToAbbreviation?: boolean;
 };
 
 export const Logo: FC<Props> = ({
-    hideTextOnMobile = true,
+    textToAbbreviation = false,
     mainComponentTag = "h1",
 }) => {
+    const title = textToAbbreviation
+        ? AUTHOR_NAME.split(" ")
+              .map((w) => w[0])
+              .join("")
+        : AUTHOR_NAME;
+
     return (
         <Typography variant="title" as={mainComponentTag} size={size}>
             <CodeXmlIcon className="mx-1 inline size-10 text-primary" />
-            <span
-                className={cn({ "sr-only sm:not-sr-only": hideTextOnMobile })}
-            >
-                {AUTHOR_NAME}
-            </span>
+            {title}
             <Typography
                 className="hidden: sm:inline"
                 as={"span"}
