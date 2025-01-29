@@ -15,7 +15,7 @@ type Props = {
 };
 
 export const ExperienceCarousel: FC<Props> = ({ experience }) => (
-    <Carousel>
+    <Carousel className="sm:hidden">
         <CarouselContent>
             {experience.map((exp) => (
                 <CarouselItem key={exp.id}>

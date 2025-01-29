@@ -1,4 +1,3 @@
-import { DeviceViewSwitcher } from "@/ui/components/molecules/DeviceViewSwitcher";
 import {
     Drawer,
     DrawerContent,
@@ -30,30 +29,26 @@ export const ResponsiveDrawer: FC<Props> = ({
     headerSrOnly = false,
 }) => {
     return (
-        <DeviceViewSwitcher
-            initializeWithValue={false}
-            desktopView={children}
-            mobileView={
-                <Drawer>
-                    <DrawerTrigger {...triggerWrapperProps} />
-                    <DrawerContent
-                        {...contentWrapperProps}
-                        className={cn(contentWrapperProps?.className, "p-4")}
-                    >
-                        <DrawerHeader
-                            className={cn({ "sr-only": headerSrOnly })}
-                        >
-                            <DrawerTitle>{title}</DrawerTitle>
-                            {description && (
-                                <DrawerDescription>
-                                    {description}
-                                </DrawerDescription>
-                            )}
-                        </DrawerHeader>
-                        {children}
-                    </DrawerContent>
-                </Drawer>
-            }
-        />
+        <>
+            <div className="hidden sm:block">{children}</div>
+            <Drawer>
+                <DrawerTrigger
+                    {...triggerWrapperProps}
+                    className={cn(triggerWrapperProps?.className, "sm:hidden")}
+                />
+                <DrawerContent
+                    {...contentWrapperProps}
+                    className={cn(contentWrapperProps?.className, "p-4")}
+                >
+                    <DrawerHeader className={cn({ "sr-only": headerSrOnly })}>
+                        <DrawerTitle>{title}</DrawerTitle>
+                        {description && (
+                            <DrawerDescription>{description}</DrawerDescription>
+                        )}
+                    </DrawerHeader>
+                    {children}
+                </DrawerContent>
+            </Drawer>
+        </>
     );
 };

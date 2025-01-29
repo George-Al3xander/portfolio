@@ -14,7 +14,10 @@ export const ExperienceTabs = ({
 }: {
     experience: TExperience[];
 }) => (
-    <HorizontalTabs defaultValue={experience[0]!.id}>
+    <HorizontalTabs
+        className="!hidden sm:!flex"
+        defaultValue={experience[0]!.id}
+    >
         <TabsList>
             {experience.map(({ id, company_name }) => (
                 <TabsTrigger key={"tab-trigger-" + id} value={id}>
