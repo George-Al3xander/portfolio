@@ -1,9 +1,9 @@
+import { metadataConfig } from "@/configs/metadata";
 import { Typography } from "@/ui/components/atoms/Typography";
 import { CodeXmlIcon } from "@/ui/icons";
-
 import { FC } from "react";
-import { AUTHOR_NAME } from "../../constants/metadata";
 
+const AUTHOR_NAME = metadataConfig["author"]["name"];
 const size = "lg";
 
 type Props = {

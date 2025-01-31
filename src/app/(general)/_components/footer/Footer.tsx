@@ -1,10 +1,10 @@
-import {
-    AUTHOR_GITHUB,
-    AUTHOR_LINKEDIN,
-} from "@/app/(general)/constants/metadata";
+import { metadataConfig } from "@/configs/metadata";
 import { SocialMediaLinksList } from "@/ui/components/molecules/SocialMediaLinksList";
 import { CollaborationBlock } from "./CollaborationBlock";
 import { Copyright } from "./Copyright";
+
+const AUTHOR_GITHUB = metadataConfig["author"]["github"];
+const AUTHOR_LINKEDIN = metadataConfig["author"]["linkedin"];
 
 export const Footer = () => (
     <footer className="flex flex-col gap-4 text-center">

@@ -1,4 +1,6 @@
-import { AUTHOR_NAME } from "../../constants/metadata";
+import { metadataConfig } from "@/configs/metadata";
+
+const AUTHOR_NAME = metadataConfig["author"]["name"];
 
 export const Copyright = () => (
     <small>

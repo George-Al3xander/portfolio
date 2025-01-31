@@ -1,8 +1,10 @@
 import { getInformationById } from "@/app/(general)/_actions";
-import { AUTHOR_NAME } from "@/app/(general)/constants/metadata";
+import { metadataConfig } from "@/configs/metadata";
 import { Button } from "@/ui/components/atoms/Button";
 import { Typography } from "@/ui/components/atoms/Typography";
 import Link from "next/link";
+
+const AUTHOR_NAME = metadataConfig["author"]["name"];
 
 const Greetings = () => {
     const firstName = AUTHOR_NAME.split(" ")[0]!;

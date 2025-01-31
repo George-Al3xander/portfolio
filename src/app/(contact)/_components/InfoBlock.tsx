@@ -1,9 +1,9 @@
-import {
-    AUTHOR_GITHUB,
-    AUTHOR_LINKEDIN,
-} from "@/app/(general)/constants/metadata";
+import { metadataConfig } from "@/configs/metadata";
 import { Typography } from "@/ui/components/atoms/Typography";
 import Link from "next/link";
+
+const AUTHOR_GITHUB = metadataConfig["author"]["github"];
+const AUTHOR_LINKEDIN = metadataConfig["author"]["linkedin"];
 
 const TITLE = "Let's talk";
 

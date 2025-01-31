@@ -1,5 +1,8 @@
 import { ProjectsList } from "@/app/(projects)/_components/ProjectsList";
+import { metadataConfig } from "@/configs/metadata";
 import { Typography } from "@/ui/components/atoms/Typography";
+
+export const metadata = metadataConfig["pages"]["projects"];
 
 const ProjectsPage = () => {
     return (

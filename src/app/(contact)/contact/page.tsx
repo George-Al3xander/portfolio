@@ -1,6 +1,9 @@
 import { ContactForm } from "@/app/(contact)/_components/ContactForm";
 import { InfoBlock } from "@/app/(contact)/_components/InfoBlock";
+import { metadataConfig } from "@/configs/metadata";
 import { TitledSection } from "@/ui/components/molecules/TitledSection";
+
+export const metadata = metadataConfig["pages"]["contact"];
 
 const ContactPage = () => {
     return (
