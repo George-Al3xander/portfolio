@@ -11,6 +11,7 @@ export const typographyVariants = cva("font-poppins opacity-80", {
         variant: {
             title: "font-bold",
             description: "opacity-70",
+            quote: "border-l-8 border-primary pl-4",
         },
         highlight: {
             primary: "opacity-100 text-primary",
