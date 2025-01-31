@@ -15,14 +15,14 @@ export const TitledSection: FC<Props> = ({
     typographyProps,
 }) => {
     return (
-        <section {...sectionProps} className={cn(sectionProps?.className)}>
+        <section {...sectionProps} className={sectionProps?.className}>
             <Typography
                 as="h2"
                 variant="title"
                 {...typographyProps}
                 className={cn(
-                    typographyProps?.className,
                     "mb-8 text-4xl sm:text-6xl",
+                    typographyProps?.className,
                 )}
             >
                 {title}

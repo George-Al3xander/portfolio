@@ -18,8 +18,8 @@ export const IconLink: FC<Props> = ({
     <Link
         {...props}
         className={cn(
-            className,
             "text-foreground transition-all hover:text-primary hover:opacity-60",
+            className,
         )}
     >
         <Icon />

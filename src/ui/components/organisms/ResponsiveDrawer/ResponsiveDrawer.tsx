@@ -34,11 +34,11 @@ export const ResponsiveDrawer: FC<Props> = ({
             <Drawer>
                 <DrawerTrigger
                     {...triggerWrapperProps}
-                    className={cn(triggerWrapperProps?.className, "sm:hidden")}
+                    className={cn("sm:hidden", triggerWrapperProps?.className)}
                 />
                 <DrawerContent
                     {...contentWrapperProps}
-                    className={cn(contentWrapperProps?.className, "p-4")}
+                    className={cn("p-4", contentWrapperProps?.className)}
                 >
                     <DrawerHeader className={cn({ "sr-only": headerSrOnly })}>
                         <DrawerTitle>{title}</DrawerTitle>
