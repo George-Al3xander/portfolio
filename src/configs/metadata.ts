@@ -1,6 +1,6 @@
 const AUTHOR_NAME = "Heorhii Valuiskyi";
 
-const AUTHOR_LINKEDIN = "https://www.linkedin.com/in/valuiskyi/";
+const AUTHOR_LINKEDIN = "https://www.linkedin.com/in/valuiskyi";
 
 const AUTHOR_GITHUB = "https://github.com/George-Al3xander";
 
