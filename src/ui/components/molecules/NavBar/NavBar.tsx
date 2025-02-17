@@ -2,26 +2,28 @@
 
 import { NavigationLink } from "@/ui/components/atoms/NavigationLink";
 import { usePathname } from "next/navigation";
-import { FC } from "react";
+import { ComponentType, FC, Fragment, PropsWithChildren } from "react";
 
 type Props = {
     links: { title: string; href: string }[];
+    linkWrapper?: ComponentType<PropsWithChildren>;
 };
 
-export const NavBar: FC<Props> = ({ links }) => {
+export const NavBar: FC<Props> = ({ links, linkWrapper }) => {
     const pathname = usePathname();
+    const LinkWrapper = linkWrapper || Fragment;
 
     return (
         <nav>
             <ul
                 className={
-                    "flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-10"
+                    "flex flex-col items-center gap-4 sm:flex-row sm:gap-10"
                 }
             >
                 {links.map(({ href, title }) => (
                     <li key={href}>
                         <NavigationLink active={pathname === href} href={href}>
-                            {title}
+                            <LinkWrapper>{title}</LinkWrapper>
                         </NavigationLink>
                     </li>
                 ))}

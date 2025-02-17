@@ -18,6 +18,8 @@ type Props = PropsWithChildren<{
     description?: ReactNode;
     contentWrapperProps?: ComponentProps<typeof DrawerContent>;
     headerSrOnly?: boolean;
+    mobileView?: ReactNode;
+    desktopView?: ReactNode;
 }>;
 
 export const ResponsiveDrawer: FC<Props> = ({
@@ -27,10 +29,12 @@ export const ResponsiveDrawer: FC<Props> = ({
     description,
     contentWrapperProps,
     headerSrOnly = false,
+    mobileView,
+    desktopView,
 }) => {
     return (
         <>
-            <div className="hidden sm:block">{children}</div>
+            <div className="hidden sm:block">{desktopView || children}</div>
             <Drawer>
                 <DrawerTrigger
                     {...triggerWrapperProps}
@@ -46,7 +50,7 @@ export const ResponsiveDrawer: FC<Props> = ({
                             <DrawerDescription>{description}</DrawerDescription>
                         )}
                     </DrawerHeader>
-                    {children}
+                    {mobileView || children}
                 </DrawerContent>
             </Drawer>
         </>
