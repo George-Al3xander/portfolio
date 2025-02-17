@@ -6,8 +6,10 @@ export {
     CodeXmlIcon,
     EyeIcon,
     GithubIcon,
+    HomeIcon,
     LinkedinIcon,
     MoonIcon,
+    RotateCcwIcon,
     SunIcon,
 } from "lucide-react";
 export * from "./raw";
