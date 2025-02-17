@@ -1,6 +1,7 @@
 import { CodeXmlIconRaw } from "@/ui/icons";
 import { getLocalFont } from "@/utils/get-local-font";
 import { getShadcnVarsFromFile } from "@/utils/get-shadcn-vars-from-file";
+import { hslStringToHex } from "@/utils/hsl-string-to-hex";
 import { ImageResponse } from "next/og";
 
 export const size = {
@@ -13,7 +14,8 @@ export default async function Icon() {
     const poppins = await getLocalFont();
 
     const shadcnVars = await getShadcnVarsFromFile("dark");
-    const primaryColor = `hsl(${shadcnVars["--primary"]!})`;
+    const primaryColor = hslStringToHex(shadcnVars["--primary"]!);
+    const backgroundColor = hslStringToHex(shadcnVars["--background"]!);
 
     return new ImageResponse(
         (
@@ -21,7 +23,7 @@ export default async function Icon() {
                 style={{
                     fontSize: 18,
                     background: primaryColor,
-                    color: "white",
+                    color: backgroundColor,
                     width: "100%",
                     height: "100%",
                     display: "flex",

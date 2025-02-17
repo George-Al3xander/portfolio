@@ -2,6 +2,7 @@ import { metadataConfig } from "@/configs/metadata";
 import { GitHubIconRaw, LinkedInIconRaw } from "@/ui/icons";
 import { getLocalFont } from "@/utils/get-local-font";
 import { getShadcnVarsFromFile } from "@/utils/get-shadcn-vars-from-file";
+import { hslStringToHex } from "@/utils/hsl-string-to-hex";
 import { ImageResponse } from "next/og";
 
 export const size = {
@@ -31,25 +32,22 @@ export default async function Image() {
 
     const shadcnVars = await getShadcnVarsFromFile("dark");
 
-    const primaryColor = `hsl(${shadcnVars["--primary"]!})`;
-    const secondaryColor = `hsl(${shadcnVars["--secondary"]!})`;
-    const backgroundColor = `hsl(${shadcnVars["--background"]!})`;
-    const textColor = `hsl(${shadcnVars["--foreground"]!})`;
-
-    const backgroundImage = `linear-gradient(to bottom, ${secondaryColor}, ${backgroundColor}, ${primaryColor})`;
+    const primaryColor = hslStringToHex(shadcnVars["--primary"]!);
+    const backgroundColor = hslStringToHex(shadcnVars["--background"]!);
 
     return new ImageResponse(
         (
             <div
                 style={{
-                    backgroundImage,
+                    backgroundColor: backgroundColor,
+                    // backgroundImage,
+                    color: primaryColor,
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "space-between",
                     padding: "4rem",
                     width: "100%",
                     height: "100%",
-                    color: textColor,
                 }}
             >
                 <div style={{ display: "flex", flexDirection: "column" }}>
@@ -57,7 +55,7 @@ export default async function Image() {
                         style={{
                             fontSize: 120,
                             fontStyle: "bold",
-                            borderBottom: "1px solid white",
+                            borderBottom: `6px solid ${primaryColor}`,
                             textTransform: "uppercase",
                         }}
                     >
