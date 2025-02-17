@@ -59,9 +59,7 @@ export const ExperienceItem: FC<Props> = ({
                             </hgroup>
                         </AccordionTrigger>
                         <AccordionContent className="flex flex-col gap-4">
-                            <Typography className="text-justify sm:text-left">
-                                {description}
-                            </Typography>
+                            <Typography>{description}</Typography>
                             {credentials_url && (
                                 <Button variant="ghost" asChild>
                                     <Link
