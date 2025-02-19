@@ -1,6 +1,6 @@
 "use client";
 
-import { sendEmail } from "@/app/(contact)/_actions";
+import { sendEmail } from "@/actions/contact";
 import { ContactSchema } from "@/services/libs/zod";
 import { Textarea } from "@/ui/components/atoms/Textarea";
 import { DynamicForm } from "@/ui/components/organisms/DynamicForm";

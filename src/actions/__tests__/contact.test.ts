@@ -1,4 +1,4 @@
-import { sendEmail } from "@/app/(contact)/_actions";
+import { sendEmail } from "@/actions/contact";
 
 jest.mock("@/services/api/external", () => ({
     contact: {

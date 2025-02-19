@@ -1,5 +1,5 @@
+import { getExperience } from "@/actions/experience";
 import { ExperienceItem } from "@/app/(about)/_components/experience/ExperienceItem";
-import { getExperience } from "@/app/(general)/_actions";
 
 export const ExperienceItemsList = async () => {
     const items = await getExperience();

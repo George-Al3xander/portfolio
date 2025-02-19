@@ -1,4 +1,4 @@
-import { getExperience } from "@/app/(general)/_actions";
+import { getExperience } from "@/actions/experience";
 import { ExperienceCarousel } from "@/app/(home)/_components/experience/ExperienceCarousel";
 import { ExperienceTabs } from "@/app/(home)/_components/experience/ExperienceTabs";
 import { TitledSection } from "@/ui/components/molecules/TitledSection";

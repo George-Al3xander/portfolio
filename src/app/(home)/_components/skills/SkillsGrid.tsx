@@ -1,4 +1,4 @@
-import { getSkills } from "@/app/(home)/_actions";
+import { getSkills } from "@/actions/skills";
 import { SkillCard } from "@/app/(home)/_components/skills/SkillCard";
 
 export const SkillsGrid = async () => {

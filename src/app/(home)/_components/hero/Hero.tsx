@@ -1,4 +1,4 @@
-import { getInformationById } from "@/app/(general)/_actions";
+import { getInformationById } from "@/actions/information";
 import { metadataConfig } from "@/configs/metadata";
 import { Button } from "@/ui/components/atoms/Button";
 import { Typography } from "@/ui/components/atoms/Typography";

@@ -1,4 +1,4 @@
-import { getProjects } from "@/app/(general)/_actions";
+import { getProjects } from "@/actions/projects";
 import { ProjectCard } from "@/app/(general)/_components/ProjectCard";
 
 export const ProjectsGrid = async () => {

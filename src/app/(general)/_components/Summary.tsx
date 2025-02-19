@@ -1,4 +1,4 @@
-import { getInformationById } from "@/app/(general)/_actions";
+import { getInformationById } from "@/actions/information";
 import { Typography } from "@/ui/components/atoms/Typography";
 import { TitledSection } from "@/ui/components/molecules/TitledSection";
 
