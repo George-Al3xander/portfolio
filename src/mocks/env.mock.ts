@@ -10,4 +10,5 @@ export const mockEnv = {
     EMAILJS_TEMPLATE_ID: "your_emailjs_template_id_here",
     EMAILJS_PUBLIC_KEY: "your_emailjs_public_key_here",
     EMAILJS_PRIVATE_KEY: "your_emailjs_private_key_here",
+    REVALIDATION_API_SECRET_KEY: "your_REVALIDATION_API_SECRET_KEY",
 } as const;

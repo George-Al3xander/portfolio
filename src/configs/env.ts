@@ -14,6 +14,7 @@ export const env = createEnv({
         EMAILJS_TEMPLATE_ID: z.string().min(1),
         EMAILJS_PUBLIC_KEY: z.string().min(1),
         EMAILJS_PRIVATE_KEY: z.string().min(1),
+        REVALIDATION_API_SECRET_KEY: z.string().min(1),
     },
     runtimeEnv: {
         NODE_ENV: process.env.NODE_ENV,
@@ -27,5 +28,6 @@ export const env = createEnv({
         EMAILJS_TEMPLATE_ID: process.env.EMAILJS_TEMPLATE_ID,
         EMAILJS_PUBLIC_KEY: process.env.EMAILJS_PUBLIC_KEY,
         EMAILJS_PRIVATE_KEY: process.env.EMAILJS_PRIVATE_KEY,
+        REVALIDATION_API_SECRET_KEY: process.env.REVALIDATION_API_SECRET_KEY,
     },
 });
