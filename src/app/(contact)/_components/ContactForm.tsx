@@ -8,10 +8,12 @@ import toast from "react-hot-toast";
 
 const onSuccessAction = () =>
     toast.success(
-        "Thanks for reaching out! Your message has been sent successfully. I'll get back to you as soon as possible!",
+        "Thanks for reaching out!\nYour message has been sent successfully.",
     );
 const onExternalErrorAction = () =>
-    toast.error("Oops! Something went wrong. Please try again in a moment.");
+    toast.error(
+        "Oops!\nYou may have exceeded the limit of 5 messages per hour.",
+    );
 
 export const ContactForm = () => {
     return (

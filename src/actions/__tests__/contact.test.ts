@@ -6,6 +6,16 @@ jest.mock("@/services/api/external", () => ({
     },
 }));
 
+jest.mock("@/configs/rate-limiter", () => ({
+    rateLimiter: {
+        consume: jest.fn(() => Promise.resolve(true)),
+    },
+}));
+
+jest.mock("@/utils/ip", () => ({
+    getUserIP: jest.fn(() => Promise.resolve("ip")),
+}));
+
 const validData = {
     name: "John Doe",
     email: "john@example.com",
